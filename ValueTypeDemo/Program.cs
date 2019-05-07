@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Globalization;
 
 namespace ValueTypeDemo
 {
@@ -11,7 +12,7 @@ namespace ValueTypeDemo
 
             Console.WriteLine("Please enter a loan amount");
 
-            loanAmount = Convert.ToDecimal(Console.ReadLine());
+            loanAmount = Decimal.Parse(Console.ReadLine(),NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
 
             loanAmountCopy = loanAmount;
 
